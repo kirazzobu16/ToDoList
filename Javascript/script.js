@@ -4,7 +4,8 @@ let UserLiDOM=document.querySelector("#ToDoList")
 let myToast=document.querySelector("#mytoast")
 let errorDOM=document.querySelector("#error")
 let DeleteDOM=document.querySelector("#delete")
-AddDOM.addEventListener("click",AddItem) 
+AddDOM.addEventListener("click",AddItem)
+
 
 //fonksiyon başı
 function AddItem(event)
@@ -13,8 +14,10 @@ function AddItem(event)
     let textDOM=document.querySelector("#text") 
     let liDOM= document.createElement("li")
     let spanDOM=document.createElement("span")
+    let value= textDOM.value.trim()
+     
     //if başı   
-    if(textDOM.value)
+    if(value)
     {
     liDOM.innerHTML=textDOM.value
     spanDOM.innerHTML="x"
